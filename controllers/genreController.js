@@ -1,6 +1,7 @@
 const Genre = require("../models/genre");
 const Book = require("../models/book");
 const async = require("async");
+const rateLimit = require('express-rate-limit');
 const { body, validationResult } = require("express-validator");
 
 // Display list of all Genre.

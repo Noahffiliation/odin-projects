@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const compression = require("compression");
 const helmet = require("helmet");
+const csrf = require('csurf');
+const rateLimit = require('express-rate-limit');
 require("dotenv").config();
 
 var indexRouter = require('./routes/index');
@@ -29,6 +31,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(csrf({ cookie: true }));
 app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 

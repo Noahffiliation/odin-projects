@@ -257,7 +257,7 @@ exports.book_update_post = [
   // Convert the genre to an array
   (req, res, next) => {
     if (!Array.isArray(req.body.genre)) {
-      req.body.genre = 
+      req.body.genre =
         typeof req.body.genre === "undefined" ? [] : [req.body.genre];
     }
     next();
