@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 Title: #{game.name}
+
+    p #[strong Description:] #{game.description}
+    if game.genre
+        p #[strong Genre:] #{game.genre}
+    p #[strong Price:] $#{game.price}
+    p #[strong In inventory:] #{game.stock}
+
+    hr
+    p
+        a(href=game.url+'/update') Update Game
+    p
+        a(href=game.url+'/delete') Delete Game

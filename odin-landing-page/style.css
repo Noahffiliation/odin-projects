@@ -1,0 +1,44 @@
+footer {
+    background-color: #1F2937;
+}
+
+#awesome {
+    color: #F9FAF8;
+    font-size: 48px;
+    font-weight: 800;
+    background-color: #1F2937;
+}
+
+#headerLinkText, #heroSecondaryText {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+#headerText {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+header {
+    background-color: #1F2937;
+}
+
+#quote {
+    background-color: #E5E7EB;
+}
+
+#quoteText {
+    font-size: 36px;
+    color: #1F2937;
+    font-family: "light italic";
+}
+
+button {
+    background-color: #3882F6;
+    color: #E5E7EB;
+    border-color: #E5E7EB;
+}
+
+#signup {
+    background-color: #3882F6;
+}

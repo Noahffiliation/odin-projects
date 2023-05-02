@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='name') Title:
+      input#name.form-control(type='text', placeholder='Name of game' name='name' required='true' value=(undefined===game ? '' : game.name) )
+    div.form-group
+      label(for='description') Description:
+      textarea#description.form-control(type='textarea', placeholder='Description' name='description' required='true') #{undefined===game ? '' : game.description}
+    div.form-group
+      label(for='stock') Stock:
+      textarea#stock.form-control(type='text', placeholder='Stock' name='stock' required='true') #{undefined===game ? '' : game.stock}
+    div.form-group
+      label(for='price') Price:
+      textarea#price.form-control(type='text', placeholder='Price' name='price' required='true') #{undefined===game ? '' : game.price}
+    div.form-group
+      label(for='genre') Genre:
+      textarea#genre.form-control(type='text', placeholder='Genre' name='genre') #{undefined===game ? '' : game.genre}
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
